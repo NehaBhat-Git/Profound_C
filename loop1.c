@@ -1,13 +1,27 @@
-//While loops
-//WAP to print nos from 100 to 1
+//WAP to check whether a number is prime or not
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-	int i=100;   //initialiation
-	printf("Natural number from 100 to 1\n");
-	while(i>=1)    //loop condition
+	int i, n;
+	
+	printf("Enter the number: ");
+	scanf("%d", &n);
+	
+	for(i=2;i<sqrt(n);i++)
 	{
-		printf("%d \t", i);
-		i--;   //increment
+		printf("%d\n",i);
+		if(n%i==0)
+		{
+			printf("%d is not prime!!",n);
+			break;
+		}
 	}
+	if(i*i>n)
+	{
+		printf("%d",i);
+		printf("%d is a prime number!!!",n);	
+	}
+	
+	return 0;
 }

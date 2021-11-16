@@ -1,14 +1,17 @@
-//WAP to print all even nos from 100 to 200 using FOR LOOP
+//WAP to accept a number from user and find out sum of even digits from that given number
 #include<stdio.h>
 int main()
 {
-	int i;
-	printf("Print all the even number from 100 to 200: \n");
-	//for  loop condition
-	for(i =100; i<=200;i+=2)
+	int n,rem,sum=0;
+	printf("Enter the number: ");
+	scanf("%d",&n);
+	while(n>0)  //432>0
 	{
-		printf("%d\t", i);		
-
+		rem=n%10; //2
+		if(rem%2==0)
+			sum=sum+rem;
+		n=n/10;
 	}
+	printf("Sum of all even digit is: %d",sum);
 	return 0;
 }
